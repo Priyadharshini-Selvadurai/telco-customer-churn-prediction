@@ -274,24 +274,6 @@ telco-customer-churn-prediction/
 
 ---
 
-## 📄 Assignment Requirements
-
-✅ **Dataset**: 7,043 instances, 20 features (exceeds minimum 500/12)  
-✅ **Classification**: Binary (Churn: Yes/No)  
-✅ **Models**: 6 algorithms implemented  
-✅ **Metrics**: 6 evaluation metrics calculated  
-✅ **Documentation**: Complete analysis and results  
-
----
-
-## 🎓 Academic Context
-
-**Course**: Machine Learning  
-**Program**: MTech Semester 2  
-**Assignment**: Classification Models and Evaluation Metrics  
-
----
-
 **Built with Python, Scikit-learn, Pandas, and Streamlit**
 
 *Last Updated: July 2026*
