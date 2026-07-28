@@ -2,8 +2,9 @@
 
 An enterprise-grade machine learning solution for predicting and preventing customer churn in the telecommunications industry.
 
-**Live Demo:** [Streamlit Cloud Link] *(Add after deployment)*  
-**Repository:** [GitHub Link]
+**Live Demo:** https://telco-customer-churn-prediction-kvkhxy4jeeqkzxlranpe5j.streamlit.app
+
+**Repository:** https://github.com/Priyadharshini-Selvadurai/telco-customer-churn-prediction
 
 ---
 
@@ -292,37 +293,16 @@ Your app will be live at: `https://yourusername-telco-churn.streamlit.app`
 
 ## 👥 Author
 
-**Your Name**  
+**Priyadharshini Selvadurai**  
 M.Tech Student | Machine Learning Specialization  
-BITS Pilani
-
-**Contact**: your.email@example.com  
-**LinkedIn**: [Your Profile]  
-**GitHub**: [Your Profile]
+BITS Pilani 
+**GitHub**: https://github.com/Priyadharshini-Selvadurai
 
 ---
 
 ## 📝 License
 
 This project is developed for academic purposes as part of M.Tech coursework.
-
----
-
-## 🎓 Assignment Submission
-
-**Course**: Machine Learning  
-**Assignment**: Customer Churn Prediction  
-**Submission Date**: July 2026
-
-**Deliverables:**
-- ✅ Source code with 6 ML algorithms
-- ✅ Comparative analysis with 6 metrics
-- ✅ Jupyter notebooks (5 notebooks)
-- ✅ Interactive Streamlit application
-- ✅ Complete documentation
-- ✅ Deployed live application
-- ✅ requirements.txt
-- ✅ README.md
 
 ---
 
