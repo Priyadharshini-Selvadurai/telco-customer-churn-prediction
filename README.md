@@ -6,9 +6,9 @@ An enterprise-grade machine learning solution for predicting and preventing cust
 
 ## 🔗 GitHub Repository
 
-**Repository Link**: [https://github.com/yourusername/telco-customer-churn-prediction](https://github.com/yourusername/telco-customer-churn-prediction)
+**Repository Link**: [https://github.com/Priyadharshini-Selvadurai/telco-customer-churn-prediction](https://github.com/Priyadharshini-Selvadurai/telco-customer-churn-prediction)
 
-**Live Demo**: [Streamlit Cloud Application](https://your-app-name.streamlit.app) *(Update after deployment)*
+**Live Demo**: [https://telco-customer-churn-prediction-kvkhxy4jeeqkzxlranpe5j.streamlit.app](https://telco-customer-churn-prediction-kvkhxy4jeeqkzxlranpe5j.streamlit.app)
 
 ### Repository Contents
 ✅ Complete source code with 6 ML algorithms  
@@ -389,15 +389,15 @@ This project implements and compares **6 different classification algorithms** t
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/telco-churn-prediction.git
-cd telco-churn-prediction
+git clone https://github.com/Priyadharshini-Selvadurai/telco-customer-churn-prediction.git
+cd telco-customer-churn-prediction
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run Streamlit app
 cd streamlit
-streamlit run app_enhanced.py
+streamlit run app.py
 ```
 
 The app will open in your browser at `http://localhost:8501`
@@ -450,8 +450,7 @@ telco-customer-churn-prediction/
 │   └── 05_model_evaluation.ipynb            # Performance analysis
 │
 ├── streamlit/
-│   ├── app.py                               # Original app
-│   └── app_enhanced.py                      # Enhanced platform
+│   └── app.py                               # Main Streamlit application
 │
 ├── requirements.txt                         # Dependencies
 └── README.md                                # Documentation
@@ -468,10 +467,10 @@ telco-customer-churn-prediction/
 3. Sign in with GitHub
 4. Click "New app"
 5. Select repository and branch
-6. Set main file: `streamlit/app_enhanced.py`
+6. Set main file: `streamlit/app.py`
 7. Click "Deploy"
 
-Your app will be live at: `https://yourusername-telco-churn.streamlit.app`
+Your app will be live at: `https://telco-customer-churn-prediction-kvkhxy4jeeqkzxlranpe5j.streamlit.app`
 
 ### Alternative Deployment Options
 - **AWS EC2**: Deploy on cloud VM with Docker
@@ -531,13 +530,10 @@ Your app will be live at: `https://yourusername-telco-churn.streamlit.app`
 
 ## 👥 Author
 
-**Your Name**  
+**Priyadharshini Selvadurai**  
 M.Tech Student | Machine Learning Specialization  
-BITS Pilani
-
-**Contact**: your.email@example.com  
-**LinkedIn**: [Your Profile]  
-**GitHub**: [Your Profile]
+BITS Pilani 
+**GitHub**: https://github.com/Priyadharshini-Selvadurai
 
 ---
 
@@ -547,231 +543,11 @@ This project is developed for academic purposes as part of M.Tech coursework.
 
 ---
 
-## 🎓 Assignment Submission
-
-**Course**: Machine Learning  
-**Assignment**: Customer Churn Prediction  
-**Submission Date**: July 2026
-
-**Deliverables:**
-- ✅ Source code with 6 ML algorithms
-- ✅ Comparative analysis with 6 metrics
-- ✅ Jupyter notebooks (5 notebooks)
-- ✅ Interactive Streamlit application
-- ✅ Complete documentation
-- ✅ Deployed live application
-- ✅ requirements.txt
-- ✅ README.md
-
----
-
 ## 🙏 Acknowledgments
 
 - IBM for providing the Telco Customer Churn dataset
 - BITS Pilani faculty for guidance and support
 - Open-source community for excellent ML tools
-
----
-
-**Made with ❤️ for M.Tech Machine Learning Assignment**
-3. **Recall** - True positive detection rate
-4. **F1-Score** - Harmonic mean of precision/recall
-5. **AUC-ROC** - Classification ability
-6. **MCC** - Matthews Correlation Coefficient
-
----
-
-## � Installation & Usage
-
-### Prerequisites
-- Python 3.8+
-- pip package manager
-- Git (for cloning repository)
-
-### Setup Instructions
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/telco-customer-churn-prediction.git
-cd telco-customer-churn-prediction
-
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
----
-
-## 💻 Running the Project
-
-### Option 1: Run Jupyter Notebooks (Complete Analysis Pipeline)
-
-**Step 1: Data Understanding**
-```bash
-jupyter notebook notebooks/01_data_understanding.ipynb
-```
-- Loads Excel file
-- Standardizes column names
-- Explores dataset structure
-
-**Step 2: Exploratory Data Analysis**
-```bash
-jupyter notebook notebooks/02_eda.ipynb
-```
-- Answers business questions
-- Visualizes churn patterns
-- Identifies key drivers
-
-**Step 3: Preprocessing**
-```bash
-jupyter notebook notebooks/03_preprocessing.ipynb
-```
-- Cleans and transforms data
-- Saves processed files to `data/processed/`
-
-**Step 4: Model Training**
-```bash
-jupyter notebook notebooks/04_model_training.ipynb
-```
-- Trains all 6 models
-- Calculates all 6 metrics
-- Saves best model to `models/`
-
-**Step 5: Model Evaluation**
-```bash
-jupyter notebook notebooks/05_model_evaluation.ipynb
-```
-- Comprehensive model evaluation
-- Confusion matrices and ROC curves
-- Business recommendations
-
----
-
-## 📊 Interactive Streamlit Application
-
-### Launch the Web Dashboard
-
-```bash
-cd streamlit
-streamlit run app.py
-```
-
-The application will automatically open in your browser at `http://localhost:8501`
-
-### Application Features (Assignment Requirements ✅)
-
-This Streamlit app includes all required features:
-
-#### ✅ **a. Dataset Upload Option (CSV)** [1 mark]
-- Located in "📁 Batch Prediction" page
-- Accepts CSV files with customer data
-- Automatically processes and validates input data
-
-#### ✅ **b. Model Selection Dropdown** [1 mark]
-- Available in both "🎯 Single Prediction" and "📁 Batch Prediction" pages
-- Choose from all 6 trained models:
-  - Random Forest (Recommended)
-  - Support Vector Machine (SVM)
-  - Logistic Regression
-  - Decision Tree
-  - k-Nearest Neighbors (kNN)
-  - Naive Bayes
-
-#### ✅ **c. Display of Evaluation Metrics** [1 mark]
-- **Model Evaluation Page**: Comprehensive leaderboard showing Accuracy, AUC, Precision, Recall, F1 Score, MCC for all models
-- **Batch Prediction Page**: Dynamic metrics when ground truth is available
-- Color-coded performance indicators with gradient styling
-
-#### ✅ **d. Confusion Matrix or Classification Report** [1 mark]
-- **Confusion Matrix**: Interactive Plotly heatmap showing True/False Positives/Negatives
-- **Classification Report**: Detailed per-class precision, recall, F1-score table
-- Automatically displayed in Batch Prediction page when CSV contains target column
-
-### 📱 11-Page Platform Structure
-
-1. **🏠 Executive Dashboard** - Business KPIs, churn overview, revenue projections
-2. **📊 Business Analytics** - Customer segmentation, churn patterns, risk analysis
-3. **🔍 Exploratory Data Analysis** - Feature distributions, correlations, visualizations
-4. **🧹 Data Preparation** - Preprocessing pipeline, data quality metrics
-5. **⚙️ Feature Engineering** - Feature transformations, importance rankings
-6. **🤖 Model Development** - Algorithm comparison, hyperparameters
-7. **📈 Model Evaluation** - Performance metrics, ROC curves, model leaderboard
-8. **🎯 Single Prediction** - Individual customer risk assessment with recommendations
-9. **📁 Batch Prediction** - CSV upload, bulk scoring, downloadable results
-10. **💡 AI Recommendations** - Retention strategies, ROI calculator
-11. **📚 Documentation** - Complete methodology, deployment guide
-
-### Sample Prediction Workflow
-
-**Single Customer Prediction:**
-```bash
-1. Navigate to "🎯 Single Prediction"
-2. Select model (e.g., Random Forest)
-3. Enter customer details:
-   - Tenure: 12 months
-   - Monthly Charges: $70
-   - Contract: Month-to-month
-   - Services: Fiber optic, no tech support
-4. Click "Predict Churn Risk"
-5. View risk score, probability, and AI recommendations
-```
-
-**Batch Processing:**
-```bash
-1. Navigate to "📁 Batch Prediction"
-2. Select model from dropdown
-3. Upload CSV file with customer data
-4. Click "Process Batch Predictions"
-5. View confusion matrix and classification report (if ground truth included)
-6. Download scored results with risk categories
-```
-
-### Sample CSV Format
-
-```csv
-gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,InternetService,Contract,MonthlyCharges,TotalCharges,Churn
-Male,0,No,No,12,Yes,Fiber optic,Month-to-month,70.5,846.0,Yes
-Female,1,Yes,No,48,Yes,DSL,Two year,45.2,2170.4,No
-```
-
-**Note**: Include `Churn` column (Yes/No) to see confusion matrix and metrics evaluation.
-
----
-
-## 🔮 Future Improvements
-
-### Short-Term
-- [ ] Implement SMOTE for class imbalance handling
-- [ ] Add hyperparameter tuning with GridSearchCV
-- [ ] Include feature importance analysis
-- [ ] Add model explainability (SHAP values)
-
-### Long-Term
-- [ ] Deploy as REST API (Flask/FastAPI)
-- [ ] Real-time prediction pipeline
-- [ ] A/B testing framework
-- [ ] Integration with CRM systems
-- [ ] Cost-benefit analysis dashboard
-
----
-
-## 📁 Project Structure
-
-```
-telco-customer-churn-prediction/
-├── data/
-│   ├── raw/                  # Excel dataset
-│   └── processed/            # Processed train/test data
-├── notebooks/                # Jupyter notebooks (01-05)
-├── models/                   # Trained models
-├── streamlit/                # Web application
-│   └── app.py
-├── requirements.txt          # Dependencies
-└── README.md                # This file
-```
 
 ---
 
