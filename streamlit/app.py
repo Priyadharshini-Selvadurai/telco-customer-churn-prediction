@@ -1894,6 +1894,70 @@ elif page == "📁 Batch Prediction":
                         labels=['Low', 'Medium', 'High']
                     )
                     
+                    # ========== EVALUATION METRICS (if ground truth exists) ==========
+                    if target_col and target_col in df.columns:
+                        st.markdown("---")
+                        st.markdown(f"#### 📊 Model Evaluation Metrics ({selected_model_name})")
+                        
+                        # Prepare ground truth
+                        y_true = df[target_col].map({'Yes': 1, 'No': 0, 1: 1, 0: 0}).fillna(0).astype(int)
+                        
+                        # Calculate metrics
+                        acc = accuracy_score(y_true, predictions)
+                        precision = precision_score(y_true, predictions, zero_division=0)
+                        recall = recall_score(y_true, predictions, zero_division=0)
+                        f1 = f1_score(y_true, predictions, zero_division=0)
+                        mcc = matthews_corrcoef(y_true, predictions)
+                        try:
+                            auc = roc_auc_score(y_true, probabilities)
+                        except Exception:
+                            auc = 0.5
+                        
+                        # Display metrics
+                        m1, m2, m3, m4, m5, m6 = st.columns(6)
+                        m1.metric("Accuracy", f"{acc:.3f}")
+                        m2.metric("AUC", f"{auc:.3f}")
+                        m3.metric("Precision", f"{precision:.3f}")
+                        m4.metric("Recall", f"{recall:.3f}")
+                        m5.metric("F1 Score", f"{f1:.3f}")
+                        m6.metric("MCC", f"{mcc:.3f}")
+                        
+                        st.markdown("<br>", unsafe_allow_html=True)
+                        
+                        # Confusion Matrix and Classification Report
+                        col_cm, col_cr = st.columns([1, 1])
+                        
+                        with col_cm:
+                            st.markdown("##### Confusion Matrix")
+                            cm = confusion_matrix(y_true, predictions)
+                            fig_cm = px.imshow(
+                                cm, 
+                                text_auto=True,
+                                labels=dict(x="Predicted", y="Actual", color="Count"),
+                                x=['No Churn (0)', 'Churn (1)'],
+                                y=['No Churn (0)', 'Churn (1)'],
+                                color_continuous_scale='Blues'
+                            )
+                            fig_cm.update_layout(
+                                height=350,
+                                paper_bgcolor='rgba(0,0,0,0)',
+                                plot_bgcolor='rgba(0,0,0,0)',
+                                font=dict(color='#ffffff')
+                            )
+                            st.plotly_chart(fig_cm, use_container_width=True)
+                        
+                        with col_cr:
+                            st.markdown("##### Classification Report")
+                            rep_dict = classification_report(y_true, predictions, 
+                                                            target_names=['No Churn', 'Churn'],
+                                                            output_dict=True)
+                            rep_df = pd.DataFrame(rep_dict).transpose()
+                            st.dataframe(
+                                rep_df.style.format("{:.3f}").background_gradient(cmap='RdYlGn', subset=['f1-score']),
+                                use_container_width=True,
+                                height=280
+                            )
+                    
                     st.markdown("---")
                     
                     # Summary Statistics
@@ -2318,6 +2382,5 @@ st.markdown("---")
 st.markdown("""
     <div style="text-align: center; color: #64748b; font-size: 0.85rem;">
         <p>🎯 Telco Customer Intelligence Platform | Built with Streamlit & scikit-learn</p>
-        <p>© 2026 | Machine Learning Project | M.Tech</p>
     </div>
 """, unsafe_allow_html=True)
