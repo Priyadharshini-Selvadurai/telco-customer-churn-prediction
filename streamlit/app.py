@@ -69,7 +69,7 @@ st.markdown("""
         font-weight: 800;
         letter-spacing: -1.2px;
         margin: 0;
-        background: linear-gradient(135deg, #ffffff 0%, #00f5ff 40%, #a855f7 75%, #14b8a6 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #334155 40%, #64748b 75%, #475569 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -103,8 +103,8 @@ st.markdown("""
     }
 
     div[data-testid="stRadio"] label:hover {
-        color: #00f5ff !important;
-        background: rgba(255, 255, 255, 0.05) !important;
+        color: #334155 !important;
+        background: rgba(59, 130, 246, 0.1) !important;
     }
 
     /* Form Elements */
@@ -132,20 +132,20 @@ st.markdown("""
     /* Buttons */
     div.stButton > button, 
     div[data-testid="stFormSubmitButton"] > button {
-        background: linear-gradient(135deg, #00f5ff 0%, #7c3aed 100%) !important;
+        background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
         color: #ffffff !important;
         border: none !important;
         border-radius: 12px !important;
         padding: 0.7rem 1.5rem !important;
         font-weight: 700 !important;
-        box-shadow: 0 8px 24px rgba(0, 245, 255, 0.35) !important;
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3) !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
     }
 
     div.stButton > button:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 12px 32px rgba(0, 245, 255, 0.5) !important;
+        box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4) !important;
     }
 
     /* Glass Panels */
@@ -169,7 +169,7 @@ st.markdown("""
     }
 
     div[data-testid="stMetricValue"] {
-        background: linear-gradient(135deg, #00f5ff 0%, #a855f7 100%);
+        background: linear-gradient(135deg, #334155 0%, #475569 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800 !important;
@@ -202,13 +202,13 @@ st.markdown("""
 
     .kpi-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 16px 40px rgba(0, 245, 255, 0.2);
+        box-shadow: 0 16px 40px rgba(59, 130, 246, 0.15);
     }
 
     .kpi-value {
         font-size: 2.5rem;
         font-weight: 800;
-        background: linear-gradient(135deg, #00f5ff 0%, #a855f7 100%);
+        background: linear-gradient(135deg, #334155 0%, #475569 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0;
@@ -223,8 +223,8 @@ st.markdown("""
 
     /* Insight Box */
     .insight-box {
-        background: rgba(20, 184, 166, 0.1);
-        border-left: 4px solid #14b8a6;
+        background: rgba(59, 130, 246, 0.08);
+        border-left: 4px solid #334155;
         border-radius: 8px;
         padding: 1rem;
         margin: 1rem 0;
@@ -232,7 +232,7 @@ st.markdown("""
     }
 
     .insight-box strong {
-        color: #14b8a6;
+        color: #334155;
     }
 
     /* Progress Card */
@@ -252,21 +252,21 @@ st.markdown("""
     }
 
     .progress-status {
-        color: #14b8a6;
+        color: #334155;
         font-size: 0.85rem;
     }
 
     /* Recommendation Card */
     .recommendation-card {
-        background: rgba(168, 85, 247, 0.1);
-        border-left: 4px solid #a855f7;
+        background: rgba(100, 116, 139, 0.1);
+        border-left: 4px solid #64748b;
         border-radius: 12px;
         padding: 1rem;
         margin: 0.5rem 0;
     }
 
     .recommendation-card h4 {
-        color: #a855f7 !important;
+        color: #64748b !important;
         margin: 0 0 0.5rem 0 !important;
     }
 
@@ -283,8 +283,8 @@ st.markdown("""
     }
 
     .stTabs [aria-selected="true"] {
-        background: rgba(0, 245, 255, 0.2);
-        color: #00f5ff;
+        background: rgba(59, 130, 246, 0.15);
+        color: #334155;
     }
 
     hr {
@@ -484,7 +484,7 @@ with st.sidebar:
     
     for icon, step, completed in workflow_steps:
         status = "✅" if completed else "⏳"
-        color = "#14b8a6" if completed else "#94a3b8"
+        color = "#334155" if completed else "#94a3b8"
         st.markdown(f"""
         <div style="padding: 0.5rem; margin: 0.3rem 0; background: rgba(255,255,255,0.03); 
                     border-left: 3px solid {color}; border-radius: 4px;">
@@ -546,7 +546,7 @@ if page == "🏠 Executive Dashboard":
     # Business Problem
     st.markdown("""
     <div class="glass-panel">
-        <h4 style="color: #00f5ff; margin-top:0;">📋 Business Problem</h4>
+        <h4 style="color: #334155; margin-top:0;">📋 Business Problem</h4>
         <p style="color: #f1f5f9; line-height: 1.6;">
         Customer churn represents a critical challenge in the telecommunications industry, 
         directly impacting revenue and growth. This platform leverages machine learning to:
@@ -622,7 +622,7 @@ if page == "🏠 Executive Dashboard":
     with col1:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #a855f7; margin-top:0;">📦 Dataset Overview</h4>
+            <h4 style="color: #64748b; margin-top:0;">📦 Dataset Overview</h4>
             <ul style="color: #cbd5e1; line-height: 1.8;">
                 <li><strong>Source:</strong> Telco Customer Dataset</li>
                 <li><strong>Records:</strong> 7,043 customers</li>
@@ -636,7 +636,7 @@ if page == "🏠 Executive Dashboard":
     with col2:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #14b8a6; margin-top:0;">🎯 Business Value</h4>
+            <h4 style="color: #64748b; margin-top:0;">🎯 Business Value</h4>
             <ul style="color: #cbd5e1; line-height: 1.8;">
                 <li><strong>Proactive Retention:</strong> Identify at-risk customers early</li>
                 <li><strong>Cost Savings:</strong> Reduce customer acquisition costs</li>
@@ -675,25 +675,25 @@ if page == "🏠 Executive Dashboard":
     impact_col1, impact_col2, impact_col3 = st.columns(3)
     
     with impact_col1:
-        st.markdown("""
-        <div class="glass-panel" style="text-align: center;">
-            <h2 style="color: #00f5ff; margin: 0;">15-25%</h2>
+        st.markdown(f"""
+            <div class="glass-panel" style="text-align: center;">
+                <h2 style="color: #334155; margin: 0;">15-25%</h2>
             <p style="color: #94a3b8; margin-top: 0.5rem;">Reduction in Churn Rate</p>
         </div>
         """, unsafe_allow_html=True)
     
     with impact_col2:
-        st.markdown("""
-        <div class="glass-panel" style="text-align: center;">
-            <h2 style="color: #a855f7; margin: 0;">84%</h2>
+        st.markdown(f"""
+            <div class="glass-panel" style="text-align: center;">
+                <h2 style="color: #334155; margin: 0;">84%</h2>
             <p style="color: #94a3b8; margin-top: 0.5rem;">Model Prediction Accuracy</p>
         </div>
         """, unsafe_allow_html=True)
     
     with impact_col3:
-        st.markdown("""
-        <div class="glass-panel" style="text-align: center;">
-            <h2 style="color: #14b8a6; margin: 0;">$500K+</h2>
+        st.markdown(f"""
+            <div class="glass-panel" style="text-align: center;">
+                <h2 style="color: #10B981; margin: 0;">$500K+</h2>
             <p style="color: #94a3b8; margin-top: 0.5rem;">Potential Annual Savings</p>
         </div>
         """, unsafe_allow_html=True)
@@ -716,7 +716,7 @@ if page == "🏠 Executive Dashboard":
             st.markdown(f"""
             <div class="glass-panel" style="text-align: center;">
                 <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">Customers Predicted to Churn</p>
-                <h2 style="color: #f43f5e; margin: 0.5rem 0;">{customers_at_risk}</h2>
+                <h2 style="color: #475569; margin: 0.5rem 0;">{customers_at_risk}</h2>
                 <p style="color: #64748b; margin: 0; font-size: 0.8rem;">26.5% of customer base</p>
             </div>
             """, unsafe_allow_html=True)
@@ -725,7 +725,7 @@ if page == "🏠 Executive Dashboard":
             st.markdown(f"""
             <div class="glass-panel" style="text-align: center;">
                 <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">Retention Success Rate</p>
-                <h2 style="color: #f59e0b; margin: 0.5rem 0;">{retention_success_rate}%</h2>
+                <h2 style="color: #64748b; margin: 0.5rem 0;">{retention_success_rate}%</h2>
                 <p style="color: #64748b; margin: 0; font-size: 0.8rem;">{customers_saved} customers saved</p>
             </div>
             """, unsafe_allow_html=True)
@@ -734,7 +734,7 @@ if page == "🏠 Executive Dashboard":
             st.markdown(f"""
             <div class="glass-panel" style="text-align: center;">
                 <p style="color: #94a3b8; margin: 0; font-size: 0.9rem;">Estimated Revenue Saved</p>
-                <h2 style="color: #14b8a6; margin: 0.5rem 0;">${revenue_saved:,}</h2>
+                <h2 style="color: #64748b; margin: 0.5rem 0;">${revenue_saved:,}</h2>
                 <p style="color: #64748b; margin: 0; font-size: 0.8rem;">Based on $3,500 LTV</p>
             </div>
             """, unsafe_allow_html=True)
@@ -776,10 +776,13 @@ elif page == "📊 Business Analytics":
             st.markdown("##### Contract Distribution")
             if 'Contract' in df_raw.columns:
                 contract_counts = df_raw['Contract'].value_counts()
+                # Highlight the largest segment with blue accent
+                colors = ['#334155' if i == 0 else '#64748b' if i == 1 else '#94a3b8' 
+                         for i in range(len(contract_counts))]
                 fig_contract = px.pie(
                     values=contract_counts.values,
                     names=contract_counts.index,
-                    color_discrete_sequence=['#00f5ff', '#a855f7', '#14b8a6']
+                    color_discrete_sequence=colors
                 )
                 fig_contract.update_layout(
                     paper_bgcolor='rgba(0,0,0,0)',
@@ -793,11 +796,13 @@ elif page == "📊 Business Analytics":
             st.markdown("##### Gender Distribution")
             if 'Gender' in df_raw.columns:
                 gender_counts = df_raw['Gender'].value_counts()
+                # Highlight highest count with blue
+                colors = ['#334155', '#64748b']
                 fig_gender = px.bar(
                     x=gender_counts.index,
                     y=gender_counts.values,
                     color=gender_counts.index,
-                    color_discrete_sequence=['#00f5ff', '#a855f7']
+                    color_discrete_sequence=colors
                 )
                 fig_gender.update_layout(
                     paper_bgcolor='rgba(0,0,0,0)',
@@ -816,11 +821,13 @@ elif page == "📊 Business Analytics":
             st.markdown("##### Internet Service Type")
             if 'Internet Service' in df_raw.columns:
                 internet_counts = df_raw['Internet Service'].value_counts()
+                # Highlight most common service with blue
+                colors = ['#334155', '#64748b', '#94a3b8']
                 fig_internet = px.bar(
                     x=internet_counts.index,
                     y=internet_counts.values,
                     color=internet_counts.index,
-                    color_discrete_sequence=['#00f5ff', '#a855f7', '#14b8a6']
+                    color_discrete_sequence=colors
                 )
                 fig_internet.update_layout(
                     paper_bgcolor='rgba(0,0,0,0)',
@@ -837,11 +844,13 @@ elif page == "📊 Business Analytics":
             st.markdown("##### Payment Method Distribution")
             if 'Payment Method' in df_raw.columns:
                 payment_counts = df_raw['Payment Method'].value_counts()
+                # Highlight most common payment method with blue
+                colors = ['#334155', '#64748b', '#94a3b8', '#cbd5e1']
                 fig_payment = px.bar(
                     x=payment_counts.index,
                     y=payment_counts.values,
                     color=payment_counts.index,
-                    color_discrete_sequence=['#00f5ff', '#a855f7', '#14b8a6', '#f43f5e']
+                    color_discrete_sequence=colors
                 )
                 fig_payment.update_layout(
                     paper_bgcolor='rgba(0,0,0,0)',
@@ -902,7 +911,7 @@ elif page == "🔍 Exploratory Data Analysis":
                     fig_tenure = px.histogram(
                         df_raw, x='tenure',
                         nbins=30,
-                        color_discrete_sequence=['#00f5ff']
+                        color_discrete_sequence=['#334155']  # Blue for key metric
                     )
                     fig_tenure.update_layout(
                         paper_bgcolor='rgba(0,0,0,0)',
@@ -925,7 +934,7 @@ elif page == "🔍 Exploratory Data Analysis":
                     fig_monthly = px.histogram(
                         df_raw, x='MonthlyCharges',
                         nbins=30,
-                        color_discrete_sequence=['#a855f7']
+                        color_discrete_sequence=['#334155']  # Blue for key metric
                     )
                     fig_monthly.update_layout(
                         paper_bgcolor='rgba(0,0,0,0)',
@@ -950,7 +959,7 @@ elif page == "🔍 Exploratory Data Analysis":
                     fig_total = px.histogram(
                         total_charges_numeric.dropna(),
                         nbins=30,
-                        color_discrete_sequence=['#14b8a6']
+                        color_discrete_sequence=['#334155']  # Blue for key metric
                     )
                     fig_total.update_layout(
                         paper_bgcolor='rgba(0,0,0,0)',
@@ -979,7 +988,7 @@ elif page == "🔍 Exploratory Data Analysis":
                 fig_corr = px.imshow(
                     corr_matrix,
                     text_auto='.2f',
-                    color_continuous_scale='RdBu_r',
+                    color_continuous_scale=['#cbd5e1', '#94a3b8', '#64748b'],  # Light to dark grey
                     aspect='auto'
                 )
                 fig_corr.update_layout(
@@ -1013,7 +1022,7 @@ elif page == "🔍 Exploratory Data Analysis":
                             x=churn_contract.index,
                             y=churn_contract.values,
                             color=churn_contract.values,
-                            color_continuous_scale='RdYlGn_r'
+                            color_continuous_scale=['#10B981', '#F59E0B', '#EF4444']  # Green to Red for churn rate
                         )
                         fig_contract_churn.update_layout(
                             paper_bgcolor='rgba(0,0,0,0)',
@@ -1034,7 +1043,7 @@ elif page == "🔍 Exploratory Data Analysis":
                             x=churn_internet.index,
                             y=churn_internet.values,
                             color=churn_internet.values,
-                            color_continuous_scale='RdYlGn_r'
+                            color_continuous_scale=['#10B981', '#F59E0B', '#EF4444']  # Green to Red
                         )
                         fig_internet_churn.update_layout(
                             paper_bgcolor='rgba(0,0,0,0)',
@@ -1058,7 +1067,7 @@ elif page == "🧹 Data Preparation":
     
     st.markdown("""
     <div class="glass-panel">
-        <h4 style="color: #00f5ff; margin-top:0;">📋 Data Cleaning Pipeline</h4>
+        <h4 style="color: #64748b; margin-top:0;">📋 Data Cleaning Pipeline</h4>
         <p style="color: #cbd5e1;">
         Systematic transformation of raw data into ML-ready features through multiple preprocessing steps.
         </p>
@@ -1115,7 +1124,7 @@ elif page == "🧹 Data Preparation":
     with enc_col1:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #a855f7; margin-top:0;">🔤 Categorical Encoding</h4>
+            <h4 style="color: #64748b; margin-top:0;">🔤 Categorical Encoding</h4>
             <table style="width: 100%; color: #cbd5e1;">
                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <td style="padding: 0.5rem;"><strong>Feature</strong></td>
@@ -1149,7 +1158,7 @@ elif page == "🧹 Data Preparation":
     with enc_col2:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #14b8a6; margin-top:0;">📏 Feature Scaling</h4>
+            <h4 style="color: #64748b; margin-top:0;">📏 Feature Scaling</h4>
             <table style="width: 100%; color: #cbd5e1;">
                 <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <td style="padding: 0.5rem;"><strong>Feature</strong></td>
@@ -1183,7 +1192,7 @@ elif page == "🧹 Data Preparation":
     with split_col1:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #00f5ff; margin: 0;">80%</h3>
+            <h3 style="color: #64748b; margin: 0;">80%</h3>
             <p style="color: #94a3b8;">Training Set</p>
             <p style="color: #cbd5e1; font-size: 0.85rem;">5,634 samples</p>
         </div>
@@ -1192,7 +1201,7 @@ elif page == "🧹 Data Preparation":
     with split_col2:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #a855f7; margin: 0;">20%</h3>
+            <h3 style="color: #64748b; margin: 0;">20%</h3>
             <p style="color: #94a3b8;">Test Set</p>
             <p style="color: #cbd5e1; font-size: 0.85rem;">1,409 samples</p>
         </div>
@@ -1201,7 +1210,7 @@ elif page == "🧹 Data Preparation":
     with split_col3:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #14b8a6; margin: 0;">Stratified</h3>
+            <h3 style="color: #64748b; margin: 0;">Stratified</h3>
             <p style="color: #94a3b8;">Split Method</p>
             <p style="color: #cbd5e1; font-size: 0.85rem;">Preserves class balance</p>
         </div>
@@ -1215,7 +1224,7 @@ elif page == "⚙️ Feature Engineering":
     
     st.markdown("""
     <div class="glass-panel">
-        <h4 style="color: #00f5ff; margin-top:0;">🔧 Feature Transformation Pipeline</h4>
+        <h4 style="color: #64748b; margin-top:0;">🔧 Feature Transformation Pipeline</h4>
         <p style="color: #cbd5e1;">
         Systematic creation and selection of features to maximize model performance.
         </p>
@@ -1228,7 +1237,7 @@ elif page == "⚙️ Feature Engineering":
     with feat_col1:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #00f5ff; margin: 0;">33</h3>
+            <h3 style="color: #64748b; margin: 0;">33</h3>
             <p style="color: #94a3b8;">Original Features</p>
         </div>
         """, unsafe_allow_html=True)
@@ -1243,7 +1252,7 @@ elif page == "⚙️ Feature Engineering":
     with feat_col3:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #a855f7; margin: 0;">21</h3>
+            <h3 style="color: #64748b; margin: 0;">21</h3>
             <p style="color: #94a3b8;">After Dropping</p>
             <p style="color: #cbd5e1; font-size: 0.8rem;">Removed: CustomerID, metadata</p>
         </div>
@@ -1252,7 +1261,7 @@ elif page == "⚙️ Feature Engineering":
     with feat_col4:
         st.markdown("""
         <div class="glass-panel" style="text-align: center;">
-            <h3 style="color: #14b8a6; margin: 0;">{}</h3>
+            <h3 style="color: #64748b; margin: 0;">{}</h3>
             <p style="color: #94a3b8;">Final Features</p>
             <p style="color: #cbd5e1; font-size: 0.8rem;">After encoding</p>
         </div>
@@ -1266,7 +1275,7 @@ elif page == "⚙️ Feature Engineering":
     with type_col1:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #00f5ff; margin-top:0;">📊 Numerical Features (3)</h4>
+            <h4 style="color: #64748b; margin-top:0;">📊 Numerical Features (3)</h4>
             <ul style="color: #cbd5e1; line-height: 1.8;">
                 <li><strong>tenure:</strong> Customer relationship duration (months)</li>
                 <li><strong>MonthlyCharges:</strong> Current monthly bill amount</li>
@@ -1278,7 +1287,7 @@ elif page == "⚙️ Feature Engineering":
     with type_col2:
         st.markdown("""
         <div class="glass-panel">
-            <h4 style="color: #a855f7; margin-top:0;">🏷️ Categorical Features (18)</h4>
+            <h4 style="color: #64748b; margin-top:0;">🏷️ Categorical Features (18)</h4>
             <ul style="color: #cbd5e1; line-height: 1.8;">
                 <li><strong>Contract:</strong> Month-to-month, One year, Two year</li>
                 <li><strong>Internet Service:</strong> DSL, Fiber optic, No</li>
@@ -1307,7 +1316,7 @@ elif page == "⚙️ Feature Engineering":
                     y='Feature',
                     orientation='h',
                     color='Importance',
-                    color_continuous_scale='Turbo'
+                    color_continuous_scale=['#94a3b8', '#334155']  # Grey to Blue
                 )
                 fig_importance.update_layout(
                     paper_bgcolor='rgba(0,0,0,0)',
@@ -1335,7 +1344,7 @@ elif page == "🤖 Model Development":
     
     st.markdown("""
     <div class="glass-panel">
-        <h4 style="color: #00f5ff; margin-top:0;">🧠 Machine Learning Algorithms</h4>
+        <h4 style="color: #64748b; margin-top:0;">🧠 Machine Learning Algorithms</h4>
         <p style="color: #cbd5e1;">
         Six classification algorithms trained and compared for optimal churn prediction.
         </p>
@@ -1402,15 +1411,15 @@ elif page == "🤖 Model Development":
             info = model_info[i]
             st.markdown(f"""
             <div class="glass-panel">
-                <h4 style="color: #00f5ff; margin-top:0;">{info['icon']} {info['name']}</h4>
+                <h4 style="color: #64748b; margin-top:0;">{info['icon']} {info['name']}</h4>
                 <p style="color: #94a3b8; margin-bottom: 1rem;">{info['type']}</p>
                 <div style="color: #cbd5e1; font-size: 0.85rem;">
                     <strong>Hyperparameters:</strong><br>
                     {' • '.join([f"{k}: {v}" for k, v in list(info['params'].items())[:3]])}
                 </div>
                 <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <span style="color: #14b8a6;"><strong>Training Time:</strong> {info['time']}</span><br>
-                    <span style="color: #a855f7;"><strong>CV Score:</strong> {info['cv_score']}</span>
+                    <span style="color: #64748b;"><strong>Training Time:</strong> {info['time']}</span><br>
+                    <span style="color: #64748b;"><strong>CV Score:</strong> {info['cv_score']}</span>
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -1420,15 +1429,15 @@ elif page == "🤖 Model Development":
                 info = model_info[i + 1]
                 st.markdown(f"""
                 <div class="glass-panel">
-                    <h4 style="color: #00f5ff; margin-top:0;">{info['icon']} {info['name']}</h4>
+                    <h4 style="color: #64748b; margin-top:0;">{info['icon']} {info['name']}</h4>
                     <p style="color: #94a3b8; margin-bottom: 1rem;">{info['type']}</p>
                     <div style="color: #cbd5e1; font-size: 0.85rem;">
                         <strong>Hyperparameters:</strong><br>
                         {' • '.join([f"{k}: {v}" for k, v in list(info['params'].items())[:3]])}
                     </div>
                     <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                        <span style="color: #14b8a6;"><strong>Training Time:</strong> {info['time']}</span><br>
-                        <span style="color: #a855f7;"><strong>CV Score:</strong> {info['cv_score']}</span>
+                        <span style="color: #64748b;"><strong>Training Time:</strong> {info['time']}</span><br>
+                        <span style="color: #64748b;"><strong>CV Score:</strong> {info['cv_score']}</span>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -1501,22 +1510,22 @@ elif page == "📈 Model Evaluation":
     
     with top_col1:
         st.markdown("""
-        <div class="glass-panel" style="text-align: center; border: 2px solid #00f5ff;">
+        <div class="glass-panel" style="text-align: center; border: 2px solid #334155;">
             <h2 style="margin: 0;">🥇</h2>
-            <h3 style="color: #00f5ff; margin: 0.5rem 0;">Random Forest</h3>
+            <h3 style="color: #334155; margin: 0.5rem 0;">Random Forest</h3>
             <div style="margin: 1rem 0;">
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>Accuracy:</strong> <span style="color: #14b8a6;">84.2%</span>
+                    <strong>Accuracy:</strong> <span style="color: #334155;">84.2%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>AUC:</strong> <span style="color: #14b8a6;">88.1%</span>
+                    <strong>AUC:</strong> <span style="color: #334155;">88.1%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>F1 Score:</strong> <span style="color: #14b8a6;">84.0%</span>
+                    <strong>F1 Score:</strong> <span style="color: #334155;">84.0%</span>
                 </div>
             </div>
-            <div style="background: rgba(0, 245, 255, 0.1); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="color: #00f5ff; margin: 0; font-size: 0.85rem;"><strong>Best Choice</strong></p>
+            <div style="background: rgba(59, 130, 246, 0.15); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
+                <p style="color: #334155; margin: 0; font-size: 0.85rem;"><strong>Best Choice</strong></p>
                 <p style="color: #94a3b8; margin: 0; font-size: 0.75rem;">Highest overall performance</p>
             </div>
         </div>
@@ -1524,22 +1533,22 @@ elif page == "📈 Model Evaluation":
     
     with top_col2:
         st.markdown("""
-        <div class="glass-panel" style="text-align: center; border: 2px solid #a855f7;">
+        <div class="glass-panel" style="text-align: center; border: 2px solid #64748b;">
             <h2 style="margin: 0;">🥈</h2>
-            <h3 style="color: #a855f7; margin: 0.5rem 0;">SVM</h3>
+            <h3 style="color: #64748b; margin: 0.5rem 0;">SVM</h3>
             <div style="margin: 1rem 0;">
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>Accuracy:</strong> <span style="color: #14b8a6;">81.8%</span>
+                    <strong>Accuracy:</strong> <span style="color: #64748b;">81.8%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>AUC:</strong> <span style="color: #14b8a6;">85.2%</span>
+                    <strong>AUC:</strong> <span style="color: #64748b;">85.2%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>F1 Score:</strong> <span style="color: #14b8a6;">81.6%</span>
+                    <strong>F1 Score:</strong> <span style="color: #64748b;">81.6%</span>
                 </div>
             </div>
-            <div style="background: rgba(168, 85, 247, 0.1); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="color: #a855f7; margin: 0; font-size: 0.85rem;"><strong>Strong Performer</strong></p>
+            <div style="background: rgba(100, 116, 139, 0.1); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
+                <p style="color: #64748b; margin: 0; font-size: 0.85rem;"><strong>Strong Performer</strong></p>
                 <p style="color: #94a3b8; margin: 0; font-size: 0.75rem;">Good generalization</p>
             </div>
         </div>
@@ -1547,22 +1556,22 @@ elif page == "📈 Model Evaluation":
     
     with top_col3:
         st.markdown("""
-        <div class="glass-panel" style="text-align: center; border: 2px solid #14b8a6;">
+        <div class="glass-panel" style="text-align: center; border: 2px solid #64748b;">
             <h2 style="margin: 0;">🥉</h2>
-            <h3 style="color: #14b8a6; margin: 0.5rem 0;">Logistic Regression</h3>
+            <h3 style="color: #64748b; margin: 0.5rem 0;">Logistic Regression</h3>
             <div style="margin: 1rem 0;">
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>Accuracy:</strong> <span style="color: #14b8a6;">80.5%</span>
+                    <strong>Accuracy:</strong> <span style="color: #64748b;">80.5%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>AUC:</strong> <span style="color: #14b8a6;">84.5%</span>
+                    <strong>AUC:</strong> <span style="color: #64748b;">84.5%</span>
                 </div>
                 <div style="color: #cbd5e1; margin: 0.3rem 0;">
-                    <strong>F1 Score:</strong> <span style="color: #14b8a6;">80.5%</span>
+                    <strong>F1 Score:</strong> <span style="color: #64748b;">80.5%</span>
                 </div>
             </div>
-            <div style="background: rgba(20, 184, 166, 0.1); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
-                <p style="color: #14b8a6; margin: 0; font-size: 0.85rem;"><strong>Interpretable</strong></p>
+            <div style="background: rgba(100, 116, 139, 0.1); padding: 0.5rem; border-radius: 8px; margin-top: 1rem;">
+                <p style="color: #64748b; margin: 0; font-size: 0.85rem;"><strong>Interpretable</strong></p>
                 <p style="color: #94a3b8; margin: 0; font-size: 0.75rem;">Fast & explainable</p>
             </div>
         </div>
@@ -1637,7 +1646,7 @@ elif page == "📈 Model Evaluation":
             x='AUC',
             orientation='h',
             color='AUC',
-            color_continuous_scale='Turbo',
+            color_continuous_scale=['#94a3b8', '#334155'],  # Grey to Blue gradient
             text='AUC'
         )
         fig_auc.update_traces(texttemplate='%{text:.1%}', textposition='outside')
@@ -1729,15 +1738,15 @@ elif page == "🎯 Single Prediction":
                 # Determine risk level
                 if churn_percentage < 33:
                     risk_level = "Low"
-                    risk_color = "#14b8a6"
+                    risk_color = "#10B981"  # Emerald green
                     risk_emoji = "✅"
                 elif churn_percentage < 66:
                     risk_level = "Medium"
-                    risk_color = "#f59e0b"
+                    risk_color = "#F59E0B"  # Amber
                     risk_emoji = "⚠️"
                 else:
                     risk_level = "High"
-                    risk_color = "#f43f5e"
+                    risk_color = "#EF4444"  # Red
                     risk_emoji = "🚨"
                 
                 st.markdown("---")
@@ -1818,7 +1827,7 @@ elif page == "🎯 Single Prediction":
                 
                 if risk_factors:
                     for factor, severity, description in risk_factors:
-                        severity_color = "#f43f5e" if severity == "High" else "#f59e0b"
+                        severity_color = "#EF4444" if severity == "High" else "#F59E0B"  # Red for high, amber for medium
                         st.markdown(f"""
                         <div style="background: rgba(255,255,255,0.03); border-left: 4px solid {severity_color}; 
                              padding: 0.8rem; margin: 0.5rem 0; border-radius: 8px;">
@@ -1936,7 +1945,7 @@ elif page == "📁 Batch Prediction":
                                 labels=dict(x="Predicted", y="Actual", color="Count"),
                                 x=['No Churn (0)', 'Churn (1)'],
                                 y=['No Churn (0)', 'Churn (1)'],
-                                color_continuous_scale='Blues'
+                                color_continuous_scale=['#cbd5e1', '#64748b']  # Light to dark grey for confusion matrix
                             )
                             fig_cm.update_layout(
                                 height=350,
@@ -1993,7 +2002,7 @@ elif page == "📁 Batch Prediction":
                             values=risk_counts.values,
                             names=risk_counts.index,
                             color=risk_counts.index,
-                            color_discrete_map={'Low': '#14b8a6', 'Medium': '#f59e0b', 'High': '#f43f5e'}
+                            color_discrete_map={'Low': '#10B981', 'Medium': '#64748b', 'High': '#EF4444'}  # Emerald/Grey/Red for clear distinction
                         )
                         fig_pie.update_layout(
                             paper_bgcolor='rgba(0,0,0,0)',
@@ -2007,7 +2016,7 @@ elif page == "📁 Batch Prediction":
                         fig_hist = px.histogram(
                             df, x='Churn_Probability',
                             nbins=30,
-                            color_discrete_sequence=['#00f5ff']
+                            color_discrete_sequence=['#334155']  # Blue highlight
                         )
                         fig_hist.update_layout(
                             paper_bgcolor='rgba(0,0,0,0)',
@@ -2056,7 +2065,7 @@ elif page == "💡 AI Recommendations":
     
     st.markdown("""
     <div class="glass-panel">
-        <h4 style="color: #00f5ff; margin-top:0;">🤖 Intelligent Retention Strategy Generator</h4>
+        <h4 style="color: #64748b; margin-top:0;">🤖 Intelligent Retention Strategy Generator</h4>
         <p style="color: #cbd5e1;">
         Automated recommendations based on customer risk profiles, spending patterns, and service usage.
         </p>
