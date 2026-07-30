@@ -69,7 +69,7 @@ st.markdown("""
         font-weight: 800;
         letter-spacing: -1.2px;
         margin: 0;
-        background: linear-gradient(135deg, #f8fafc 0%, #334155 40%, #64748b 75%, #475569 100%);
+        background: linear-gradient(135deg, #00f5ff 0%, #a855f7 40%, #ec4899 75%, #14b8a6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
